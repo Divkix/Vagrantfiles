@@ -24,12 +24,6 @@ Vagrant.configure(2) do |config|
         v.cpus    = 1
       end
 
-      config.vm.provider: vmware_desktop do |v|
-        v.gui = false
-        v.vmx["memsize"] = 1024
-        v.vmx["numvcpus"] = 1
-      end
-
       node.vm.provider :libvirt do |v|
         v.nested  = true
         v.memory  = 1024
